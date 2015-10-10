@@ -1,0 +1,14 @@
+"*":
+  editor:
+    invisibles: {}
+  core:
+    themes: [
+      "atom-material-ui"
+      "atom-material-syntax"
+    ]
+  "exception-reporting":
+    userId: "f4bbc307-1ae3-5b64-6463-97fe253ba2bc"
+  welcome:
+    showOnStartup: false
+  autosave:
+    enabled: true
