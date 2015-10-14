@@ -60,6 +60,9 @@ export PATH="${PATH}:${ANDROID_HOME}/tools"
 export PATH="${PATH}:${ANDROID_HOME}/platform-tools"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
