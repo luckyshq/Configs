@@ -48,7 +48,7 @@ ZSH_THEME="arrow"
 plugins=(git z)
 
 # User configuration
-ANDROID_HOME="/Users/zhangshengqi/Library/Android/sdk/"
+export ANDROID_HOME="/Users/zhangshengqi/Library/Android/sdk/"
 #export PATH="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
 export PATH="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/bin"
 export PATH="${PATH}:/usr/local/bin"
