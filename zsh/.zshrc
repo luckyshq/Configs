@@ -5,7 +5,7 @@ export ZSH=/Users/zhangshengqi/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="arrow"
+ZSH_THEME="wezm"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -50,7 +50,7 @@ plugins=(git z)
 # User configuration
 export ANDROID_HOME="/Users/zhangshengqi/Library/Android/sdk/"
 #export PATH="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
-export PATH="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/bin"
+export PATH="/Library/Java/JavaVirtualMachines/1.8.0_40.jdk/Contents/Home/bin"
 export PATH="${PATH}:/usr/local/bin"
 export PATH="${PATH}:/usr/bin"
 export PATH="${PATH}:/bin"
@@ -62,6 +62,9 @@ export PATH="${PATH}:${ANDROID_HOME}/platform-tools"
 
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -143,3 +146,10 @@ alias j="java"
 #launch alias
 alias atom="open -a /Applications/Atom.app"
 alias chrome="open -a /Applications/Google\ Chrome.app"
+
+CDHOME="/Users/zhangshengqi"
+
+function getWeeklyReport() {
+  python ${CDHOME}/luckyshq/PythonUtils/WeeklyReportDecoder/WeeklyReportDecoder.py $1;
+  open ${CDHOME}/luckyshq/PythonUtils/WeeklyReportDecoder/outputs;
+}
