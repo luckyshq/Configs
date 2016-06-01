@@ -5,7 +5,7 @@ export ZSH=/Users/zhangshengqi/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="wezm"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -63,9 +63,6 @@ export PATH="${PATH}:${ANDROID_HOME}/platform-tools"
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
-
-
-
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -93,7 +90,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#cd alias
+CDHOME="/Users/zhangshengqi"
+
+############
+# cd alias #
+############
 alias ..="cd ..;
 l -a;"
 alias 2..="cd ../..;
@@ -105,8 +106,9 @@ function c() {
   l -a;
 }
 
-
-#other alias
+###############
+# other alias #
+###############
 alias al="cat ~/.zshrc"
 alias mal="atom ~/.zshrc"
 alias cl="clear"
@@ -117,12 +119,15 @@ function mk() {
   cd $1;
 }
 
-#git alias
+#############
+# git alias #
+#############
 alias gs="git status"
 alias st="git status -sb"
 alias adda="git add ."
 alias amend="git commit --amend"
 alias gl="git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias gll="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
 function ad() { git add "$1"; }
 function commit() { git commit -m "$1"; }
@@ -134,22 +139,39 @@ function commitup() { git commit -m "[update] $1"; }
 function commitpb() { git commit -m "[publish] $1"; }
 function commitmw() { git commit -m "[modify][what] $1";}
 
-alias pull="git pull origin master"
-alias pullr="git pull --rebase origin master"
+alias pull="git pull"
+alias pullr="git pull --rebase"
 
 alias push="git push origin master"
 
-#java alias
+##############
+# java alias #
+##############
 alias jc="javac"
 alias j="java"
 
-#launch alias
+################
+# launch alias #
+################
 alias atom="open -a /Applications/Atom.app"
 alias chrome="open -a /Applications/Google\ Chrome.app"
-
-CDHOME="/Users/zhangshengqi"
 
 function getWeeklyReport() {
   python ${CDHOME}/luckyshq/PythonUtils/WeeklyReportDecoder/WeeklyReportDecoder.py $1;
   open ${CDHOME}/luckyshq/PythonUtils/WeeklyReportDecoder/outputs;
 }
+
+#################
+# project alias #
+#################
+alias lucky="cd ${CDHOME}/luckyshq;"
+
+
+#############
+# adb alias #
+#############
+alias adbc="adb connect ${IP_SMALL_PLANTFORM};"
+
+#############
+# ssh alias #
+#############
